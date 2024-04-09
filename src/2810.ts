@@ -6,12 +6,9 @@
 
 
 
-function finalString(s: string): string {
+export default function finalString(s: string): string {
 	return s
 		.split('')
 		.reduce((acc, cur) => cur === 'i' ? acc.reverse() : acc.concat([cur]), [])
 		.join('')
 }
-
-console.log(finalString('string'))
-console.log(finalString('poiinter'))
